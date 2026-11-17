@@ -34,4 +34,4 @@ Reverse the steps above: restore the read-only scopes, log out and back in, then
 ## Editing these shared instructions
 This file is maintained by the repo owner only. On other machines, never edit or push it. Suggest the change to the user instead.
 
-<!-- test marker: PINEAPPLE-42 (temporary) -->
+Test marker (temporary): PINEAPPLE-43
