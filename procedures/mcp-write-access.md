@@ -1,4 +1,6 @@
-# Turning write access on and off for Figma, Slack and ClickUp
+# Turning write access on and off for Slack and ClickUp
+
+Figma always has write access, so this procedure doesn't apply to it.
 
 Read this only when the user asks for write access, or asks to disable it.
 
@@ -8,7 +10,6 @@ Read this only when the user asks for write access, or asks to disable it.
 3. Scopes, in `~/.claude.json` → `mcpServers.<name>.oauth.scopes`:
    - Slack: append `chat:write canvases:write channels:write groups:write im:write mpim:write files:write lists:write reactions:write`.
    - ClickUp: set the scopes to `"read write"`.
-   - Figma: no change.
 4. For Slack and ClickUp, run `<CLI> mcp logout <name>`, then log in again.
    - Linux: `setsid nohup script -qfec "<CLI> mcp login <name>" /dev/null > <tmp>/login.log 2>&1 &`
    - macOS: `nohup script -q /dev/null <CLI> mcp login <name> > <tmp>/login.log 2>&1 &`

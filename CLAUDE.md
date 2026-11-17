@@ -14,8 +14,8 @@ Machine-specific facts, such as the CLI path, live in the local `~/.claude/CLAUD
 - Never use the claude.ai connectors for these services, and never re-enable them. They are blocked by name in `~/.claude/settings.json`.
 - If a blocked connector shows up anyway (for example, injected by Claude Desktop), tell me.
 - Never disconnect anything on the claude.ai account, because it is shared.
-- These servers are read-only by default.
-- If I ask for write access, or ask to disable it, follow `~/.claude-shared/procedures/mcp-write-access.md`.
+- Figma has read AND write access. Slack and ClickUp are read-only by default.
+- If I ask for write access in Slack or ClickUp, or ask to disable it, follow `~/.claude-shared/procedures/mcp-write-access.md`.
 
 ## This file
 Only the repo owner edits this repo. On other machines, never edit it or push to it. Suggest the change instead.
