@@ -1,13 +1,12 @@
 #!/bin/sh
 # Runs at the start of each Claude Code session (SessionStart hook).
-# 1. Updates this repo (~/.claude-shared) from GitHub.
-# 2. Links every shared skill into ~/.claude/skills/<name> so Claude Code finds it.
-#    A local skill with the same name (a real folder) is never touched, so local wins.
-#    Links to skills that were removed from the repo get cleaned up.
+# The hook runs `git pull` on ~/.claude-shared first, then this script.
+# Links every shared skill into ~/.claude/skills/<name> so Claude Code finds it.
+# A local skill with the same name (a real folder) is never touched, so local wins.
+# Links to skills that were removed from the repo get cleaned up.
 # Never fails and never prints, so it can't block a session.
 REPO="$HOME/.claude-shared"
 DEST="$HOME/.claude/skills"
-git -C "$REPO" pull --ff-only -q >/dev/null 2>&1
 mkdir -p "$DEST" 2>/dev/null
 for dir in "$REPO"/skills/*/; do
   [ -f "$dir/SKILL.md" ] || continue
