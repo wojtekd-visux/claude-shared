@@ -1,6 +1,6 @@
 #!/bin/sh
 # Runs at the start of each Claude Code session (SessionStart hook).
-# The hook runs `git pull` on ~/.claude-shared first, then this script.
+# The hook first updates ~/.claude-shared (archive download, or git pull on a git clone), then runs this script.
 # Links every shared skill into ~/.claude/skills/<name> so Claude Code finds it.
 # A local skill with the same name (a real folder) is never touched, so local wins.
 # Links to skills that were removed from the repo get cleaned up.
