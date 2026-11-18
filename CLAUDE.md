@@ -18,4 +18,4 @@ Machine-specific facts, such as the CLI path, live in the local `~/.claude/CLAUD
 - If I ask for write access in Slack or ClickUp, or ask to disable it, follow `~/.claude-shared/procedures/mcp-write-access.md`.
 
 ## This file
-Only the repo owner edits this repo. On other machines, never edit it or push to it. Suggest the change instead.
+Only the GitHub account wojtekd-visux may edit or push to this repo. Before any change, check with `gh api user --jq .login`. If the logged-in account is different, or gh is not logged in, never edit or push: suggest the change instead.
