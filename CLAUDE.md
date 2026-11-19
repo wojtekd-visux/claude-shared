@@ -10,8 +10,10 @@ Machine-specific facts, such as the CLI path, live in the local `~/.claude/CLAUD
 - If a task seems to need files from somewhere else, ask me first and name the path.
 
 ## Figma, Slack, ClickUp
-- Use them ONLY through the local MCP servers `figma`, `slack` and `clickup`, which are logged in with this machine's own accounts.
-- Never use the claude.ai connectors for these services, and never re-enable them. They are blocked by name in `~/.claude/settings.json`.
+- Use them ONLY through local MCP servers logged in with this machine's own accounts. They are named either
+  - `figma`, `slack`, `clickup`: set up for the whole OS user, or
+  - `figma-<label>`, `slack-<label>`, `clickup-<label>`: set up per folder. Here the label names a set of accounts (emails), and the servers, blocks and rules exist only in the folders that use them. In a folder without them, these services are not connected. Say so, and suggest running the per-folder setup prompt there.
+- Never use the claude.ai connectors for these services, and never re-enable them. They are blocked by name in `~/.claude/settings.json`, or per folder in `.claude/settings.local.json`.
 - If a blocked connector shows up anyway (for example, injected by Claude Desktop), tell me.
 - Never disconnect anything on the claude.ai account, because it is shared.
 - Figma has read AND write access. Slack and ClickUp are read-only by default.

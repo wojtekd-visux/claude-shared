@@ -2,6 +2,8 @@
 
 Figma always has write access, so this procedure doesn't apply to it.
 
+Find the setup first. A per-folder setup has servers named `slack-<label>` and `clickup-<label>`, stored in `~/.claude.json` → `projects.<folder>.mcpServers`, with their deny rules in `<folder>/.claude/settings.local.json`. A user-wide setup has servers named `slack` and `clickup`, stored in the top-level `mcpServers`, with their rules in `~/.claude/settings.json`. Use the real server name and the matching files in every step below. A per-folder label can be shared by several folders: changing its scopes and logging in again affects all of them, so tell the user which folders use it.
+
 Read this only when the user asks for write access, or asks to disable it.
 
 ## "I want write access in <service>"
