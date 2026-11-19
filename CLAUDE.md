@@ -21,3 +21,5 @@ Machine-specific facts, such as the CLI path, live in the local `~/.claude/CLAUD
 
 ## This file
 Only the GitHub account wojtekd-visux may edit or push to this repo. Before any change, check with `gh api user --jq .login`. If the logged-in account is different, or gh is not logged in, never edit or push: suggest the change instead.
+
+When you add, rename or remove a skill, or add a guideline that also makes sense outside Claude Code, update `portable/INDEX.md`. That file is the entry point for the owner's other Claude accounts.
