@@ -19,6 +19,13 @@ Machine-specific facts, such as the CLI path, live in the local `~/.claude/CLAUD
 - Figma has read AND write access. Slack and ClickUp are read-only by default.
 - If I ask for write access in Slack or ClickUp, or ask to disable it, follow `~/.claude-shared/procedures/mcp-write-access.md`.
 
+## Visux knowledge base
+- Company knowledge (rules, processes, tools, invoices, time off, travel, perks, people, and later the brand book) lives in a separate private repo: `wojtekd-visux/visux-knowledge-base`. It is not pulled at session start. Read it only when a question needs it.
+- When a question is about Visux as a company, open `INDEX.md` in that repo, then only the relevant files under `content/`, and say which file the answer comes from. Reading this repo is an exception to "Stay inside the current project".
+- Usual local path: `~/Documents/Claude/knowledge_base`. If it isn't on this machine, ask me before cloning it with `gh repo clone wojtekd-visux/visux-knowledge-base`.
+- Playbook sections: start, company, time, money, communication, tools, policies, people, travel, perks, growth, delivery, offboarding.
+- If the knowledge base looks outdated or contradicts what you see (for example in Slack), tell me. Don't edit it from another project.
+
 ## This file
 Only the GitHub account wojtekd-visux may edit or push to this repo. Before any change, check with `gh api user --jq .login`. If the logged-in account is different, or gh is not logged in, never edit or push: suggest the change instead.
 
